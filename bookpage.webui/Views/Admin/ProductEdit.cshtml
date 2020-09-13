@@ -1,0 +1,96 @@
+@model ProductModel //oluşturdum ve içine entity producttaki bilgileri attım neden çünkü productun içindeki herşeyi fromda kullanmak zorunda değilim herhangi bir alan için kısıtlama yapabilirim vb.
+<h1 class="h3">Edit Product</h1>
+<hr>
+<form asp-asp-controller="Admin" asp-action="ProductEdit" method="Post" enctype="multipart/form-data">
+
+<div class="row">
+     <div class="col-md-8">
+
+<input type="hidden" name="ProductId" value="@Model.ProductId">@*formu post edince diğer bilgiler yanında gizli olarak idde gidecekki bu idye göre güncellensin*@
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Author">
+                <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Pages" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Pages">
+                <span asp-validation-for="Pages" class="text-danger"></span>
+                </div>  
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Url" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Url">@*idyi js işleminde name yi vt'ye post etme işleminde ilgili action metoduna gidecek ve giderkende burdaki url bilgisiyle girilen bilgiyi alıcaz*@
+                <span asp-validation-for="Url" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <textarea id="editor" class="form-control" asp-for="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+             <div class="form-group row">
+                <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="hidden" asp-for="ImageUrl">
+                    <img src="~/img/@Model.ImageUrl" width="80"/>
+                    <input type="file" name="file">
+                </div>
+            </div>            
+
+
+            <div class="form-group row">
+             <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Kaydet</button> @*formu submit edecek ve form ilgili adrese gönderilmiş olacak*@
+            </div>
+              </div>
+
+
+    </div>
+    <div class="col-md-4">
+        @foreach (var item in (List<Category>)ViewBag.Category) //categoriesi sayfada kullancağım için liste çevirdim
+        {
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox"
+                 class="custom-control-input"
+                 name="categoryIds"
+                 value="@item.CategoryId"
+                  id="category_@(item.CategoryId)"                  @* gelecek olan her kategori için idsine kategori sabit olarak gelecek _ dedikten sonra kategori 1,2 olarak kategori idsi gelecek*@
+                   @(Model.categories.Any(i=>i.CategoryId==item.CategoryId)?"checked":"")> @* categories tablomun içindeki id ile itemin içinde gelen eşitse kutucuğu mavi yap değilse boş bırak *@
+                <label class="custom-control-label" for="category_@(item.CategoryId)">@item.Name</label>
+            </div>
+        }
+   
+     <hr>
+            <div class="custom-control custom-checkbox">
+                <input asp-for="IsApproved" type="checkbox" class="custom-control-input">
+                <label asp-for="IsApproved" class="custom-control-label"></label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input asp-for="IsHome" type="checkbox" class="custom-control-input">
+                <label asp-for="IsHome" class="custom-control-label"></label>
+            </div>
+        </div>
+         </div>
+    </form>
+            <script src="/modules/ckeditor/ckeditor.js"></script>
+            <script> CKEDITOR.replace('editor'); </script> @*yukarıda desprc'e vereceğim editor idsini*@

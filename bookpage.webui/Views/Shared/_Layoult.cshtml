@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookApp</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+</head>
+<body>
+    
+
+    @await Html.PartialAsync("_navbar")
+
+    <main class="mb-3">
+        <div class="container">  
+
+            @if (TempData["Message"]!=null)// ne zamanki mesaj bilgisi boş değilse gelsin
+            {
+                var message= JsonConvert.DeserializeObject<AlertMessage>(TempData["message"] as String);//gelen datayı stringe çevirip deserilazobjeye gönderiyoruz oda alertmesaja c#da kullandığımız bilgiye çevirecek
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-@message.AlertType">
+                            @message.Message
+                        </div>
+                    </div>
+                </div>
+            }       
+  @*  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">*@
+
+               @RenderBody()          
+        </div>
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        eBookApp | 2020
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    @RenderSection("Scripts",false)
+</body>
+</html>

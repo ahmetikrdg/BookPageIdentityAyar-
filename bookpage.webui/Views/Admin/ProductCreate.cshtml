@@ -1,0 +1,75 @@
+@model ProductModel //oluşturdum ve içine entity producttaki bilgileri attım neden çünkü productun içindeki herşeyi fromda kullanmak zorunda değilim herhangi bir alan için kısıtlama yapabilirim vb.
+<h1 class="h3">Create Product</h1>
+<hr>
+<div class="row">
+     <div class="col-md-8">
+<form asp-asp-controller="Admin" asp-action="ProductCreate" method="Post">
+
+     @*   <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+            <input type="text"  class="form-control" id="Name" name="Name">
+            </div> BURADAKİLER gibi teker teker nameyi idyi vb. yazmaya gerek yok yukarı productmodel ekledim ve taghelper kullanıcam
+            taghelperi nasıl kullanırım asp-for="Name" dediğimde zaten modelde bu var id ve namei otomatik olara kendi çıkartacak artık
+            type="text" ide kaldırdım gerek yok bunuda hallediyor asp-for
+            eğer labelada verirsen ne olur ismi kendisi yazar labela
+*@
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Author">
+                <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Pages" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Pages">
+                <span asp-validation-for="Pages" class="text-danger"></span>
+                </div>  
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Url" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="Url">@*idyi js işleminde name yi vt'ye post etme işleminde ilgili action metoduna gidecek ve giderkende burdaki url bilgisiyle girilen bilgiyi alıcaz*@
+                <span asp-validation-for="Url" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <textarea class="form-control" asp-for="Description"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" asp-for="ImageUrl">
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+             <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Kaydet</button> @*formu submit edecek ve form ilgili adrese gönderilmiş olacak*@
+            </div>
+              </div>
+
+
+</form>
+    </div>
+        </div>
+

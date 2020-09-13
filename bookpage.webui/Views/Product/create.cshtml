@@ -1,0 +1,63 @@
+@model Product
+
+<form method="POST">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input asp-for="Name" value="@Model.Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Author">Author</label>
+        <input asp-for="Author" value="@Model.Author" class="form-control">
+        <span asp-validation-for="Author" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Pages">Pages</label>
+        <input asp-for="Pages" value="@Model.Pages" class="form-control">
+        <span asp-validation-for="Pages" class="text-danger" ></span>
+    </div>
+    @* <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea asp-for="Description" value="@Model.Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Door">Door</label>
+        <input asp-for="Door" value="@Model.Door" class="form-control">
+        <span asp-validation-for="Door" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+       <label for="Moduls1">Moduls1</label>
+       <textarea asp-for="Moduls1" value="@Model.Moduls1" class="form-control"></textarea>
+       <span asp-validation-for="Moduls1" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Moduls2">Moduls2</label>
+        <textarea asp-for="Moduls2" value="@Model.Moduls2"  class="form-control"></textarea>
+        <span asp-validation-for="Moduls2" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Moduls3">Moduls3</label>
+        <textarea asp-for="Moduls3" value="@Model.Moduls3"  class="form-control"></textarea>
+        <span asp-validation-for="Moduls3" class="text-danger" ></span>
+    </div>
+    <div class="form-group">
+        <label for="Moduls4">Moduls4</label>
+        <textarea asp-for="Moduls4" value="@Model.Moduls4"  class="form-control"></textarea>
+        <span asp-validation-for="Moduls4" class="text-danger" ></span>
+    </div> *@
+    <div class="form-group">
+        <label for="ImageUrl">ImageUrl</label>
+        <input asp-for="ImageUrl" value="@Model.ImageUrl"  class="form-control">
+        <span asp-validation-for="ImageUrl" class="text-danger" ></span>
+    </div>
+    @* <div class="form-group">
+        <label for="CategoryId">CategoryId</label>
+        <select asp-for="CategoryId" asp-items="@ViewBag.Categories" class="form-control"> @*category idimleri gelir ama id olarak gönderir value alanına catid texte isim
+            <option selected disabled>Seçiniz</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger" ></span>
+    </div> *@
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

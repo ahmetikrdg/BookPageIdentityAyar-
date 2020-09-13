@@ -1,0 +1,18 @@
+@model ProductListViewModel //yol 
+
+              <div class="row">
+    <div class="col-md-3"> @*üçlük kısma category gelsin*@
+           @await Component.InvokeAsync("Categories")
+    </div>  
+                    <div class="row">                  
+                        @foreach (var product in Model.Products)
+                        {    
+                        <div class="col-md-4">
+                            @await Html.PartialAsync("_product",product) @* dinamik olduğu için obje bejler bende product u veririm*@
+                            @* Listeden gelen her product objesini _productcshtml e gönderiyoruz ve gönderdiğimiz obje product prodyccshtml tarafından karşılanıyor ve karşılanan bilgi içerinden modelname desc yazdırılır *@
+                        </div>       
+                        
+                        }   
+                    </div>
+                
+                        

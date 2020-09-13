@@ -1,0 +1,26 @@
+@model Product 
+ <div class="card mb-2">
+            <img class="card-img-top" src="~/img/@Model.ImageUrl" alt="">
+            <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <small class="text-muted">
+            <i class="fas fa-lira-sing"><h5>Sayfa Sayısı</h5> @Model.Pages</i>
+            </small>
+             <p class="card-text"><h5>Kitabın Yazarı</h5>@Model.Author</p> 
+            </div>
+            <div class="card-footer text-center">
+            <a asp-controller="Book" asp-action="Details" asp-route-Url="@Model.Url" class="btn btn-primary btn-sm">İncele</a> @*book details altındaki product bilgisine gidiyo giderkende productid gönderiyo biz id bilgisini alıyoruz ve o id bilgisine uyan kaydı book comtroller içerisinde kullanıcılara göstericez*@  
+            <a asp-controller="Book" asp-action="AddToCard" asp-route-Url="@Model.Url" class="btn btn-primary btn-sm">Card</a>   
+            </div>
+   </div> 
+   
+   
+   
+   
+   
+   
+   @*   <a href="/product/edit/@Model.ProductId" class="btn btn-primary btn-sm">Güncelle</a>   
+            <form method="POST" action="/product/delete" style="display:inline;">
+                <input type="hidden" name="ProductId" value="@Model.ProductId" > 
+            <button type="submit" class="btn btn-danger btn-sm">Sil</button>   
+            </form> *@

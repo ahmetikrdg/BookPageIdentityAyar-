@@ -1,0 +1,12 @@
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\bin\MCD\Debug\netstandard2.0\bookpage.data.deps.json
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\bin\MCD\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\bin\MCD\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\bin\MCD\Debug\netstandard2.0\bookpage.entity.dll
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\bin\MCD\Debug\netstandard2.0\bookpage.entity.pdb
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.csprojAssemblyReference.cache
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.AssemblyInfoInputs.cache
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.AssemblyInfo.cs
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.csproj.CopyComplete
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet Karadağ\Desktop\bookpage\bookpage.data\obj\MCD\Debug\netstandard2.0\bookpage.data.pdb

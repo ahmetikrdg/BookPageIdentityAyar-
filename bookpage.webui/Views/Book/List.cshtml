@@ -1,0 +1,66 @@
+@model ProductListViewModel //yol 
+@{//buranın layoultla alakası yok
+    var popularClass=Model.Products.Count>2?"popular":""; 
+    var products=Model.Products;
+}
+
+    
+@* @section Categories{
+   @await Component.InvokeAsync("Categories")
+} *@
+
+<div class="row">
+    <div class="col-md-3"> @*üçlük kısma category gelsin*@
+           @await Component.InvokeAsync("Categories")
+    </div>
+         @*  <a href="/book/deneme" class="btn btn-primary btn-sm mr-2">deneme</a>  *@ 
+
+    <div class="col-md-9">
+       <div class="row">
+              
+                    <div class="row">                  
+                        @foreach (var product in products)
+                        {    
+                        <div class="col-md-4">
+                            @await Html.PartialAsync("_product",product) @* dinamik olduğu için obje bejler bende product u veririm*@
+                            @* Listeden gelen her product objesini _productcshtml e gönderiyoruz ve gönderdiğimiz obje product prodyccshtml tarafından karşılanıyor ve karşılanan bilgi içerinden modelname desc yazdırılır *@
+                        </div>       
+                        }   
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <a class="page-link" href="/products?page=@(1)">Ana Sayfa</a>
+                                    @for (int i = 0; i < Model.pageInfo.TotalPages(); i++)
+                                    {
+                                        @if(string.IsNullOrEmpty(Model.pageInfo.CurrentCategory))//kategori dolumu boşmu
+                                        {
+                                            <li class="page-item @(Model.pageInfo.CurrentPage==i+1?"active":"")">@*o an hangi sayfa gösteriliyorsa o sayı i+1 e eşitse aktif olsun buton değilse pasif*@
+                                                <a class="page-link" href="/products?page=@(i+1)">@*controllerden page verilirse giderse ve zaten i+1 artacak oda eşitse buna basınca 1,2 ye gider*@
+                                                @(i+1) @*ekranda gösterilecek*@
+                                                </a>
+                                           </li>
+                                        }
+                                        else
+                                        {
+                                             <li class="page-item @(Model.pageInfo.CurrentPage==i+1?"active":"")">
+                                                <a class="page-link" href="/products/@Model.pageInfo.CurrentCategory?page=@(i+1)">
+                                                @(i+1)
+                                                </a>
+                                           </li>
+                                        }
+                                        
+                                    }
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+        </div>      
+    </div>
+</div>
+
+        
+             
+

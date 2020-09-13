@@ -1,0 +1,53 @@
+@model Product
+
+<form method="POST">
+    <input type="hidden" name="ProductId" value="@Model.ProductId">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input asp-for="Name" value="@Model.Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Author">Author</label>
+        <input asp-for="Author" value="@Model.Author"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Pages">Pages</label>
+        <input asp-for="Pages" value="@Model.Pages" class="form-control">
+    </div>
+    @* <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea asp-for="Description"  value="@Model.Description"  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Door">Door</label>
+        <input asp-for="Door"  value="@Model.Door"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="Moduls1">Moduls1</label>
+       <textarea asp-for="Moduls1"  value="@Model.Moduls1"  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Moduls2">Moduls2</label>
+        <textarea asp-for="Moduls2" value="@Model.Moduls2"  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Moduls3">Moduls3</label>
+        <textarea asp-for="Moduls3" value="@Model.Moduls3"  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Moduls4">Moduls4</label>
+        <textarea asp-for="Moduls4" value="@Model.Moduls4"  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="ImageUrl">ImageUrl</label>
+        <input asp-for="ImageUrl" value="@Model.ImageUrl"  class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="CategoryId">CategoryId</label>
+        <select asp-for="CategoryId" asp-items="@ViewBag.Categories" class="form-control"> @*category idimleri gelir ama id olarak gönderir value alanına catid texte isim
+            <option selected disabled>Seçiniz</option>
+        </select>
+                    <span asp-validation-for="CategoryId" class="text-danger" ></span>
+    </div> *@
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

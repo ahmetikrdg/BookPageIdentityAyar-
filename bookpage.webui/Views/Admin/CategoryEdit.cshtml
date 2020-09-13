@@ -1,0 +1,107 @@
+@model CategoryModel //dto objeleri denir
+<h1 class="h3">Edit Category</h1>
+<hr>
+
+<div class="row">
+   <div class="col-md-4">
+<form asp-controller="Admin" asp-action="CategoryEdit" method="POST">
+
+        <input type="hidden" name="CategoryId" value="@Model.CategoryId">
+
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+            <input class="form-control" asp-for="Name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Url" class="col-sm-2 col-form-label">Url</label>
+            <div class="col-sm-10">
+            <input class="form-control" asp-for="Url">
+            </div>
+        </div>
+
+      
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary" >Gönder</button>
+            </div>
+        </div>
+</form>
+
+</div>
+<div class="col-md-8">
+    <div class="row">
+    <div class="col-md-12">
+          <table class="table table-bordered">
+              <thead>@*başlıklar*@
+                  <tr>
+                      <td>Id</td>
+                      <td>Name</td>
+                      <td>Image</td>
+                      <td>Author</td>
+                      <td>Pages</td>
+                      <td>Description</td>
+                      <td>AnaSayfa</td>
+                      <td>Onaylı</td>
+                      <td>Erişim</td>
+                  </tr>
+              </thead>
+              <tbody>@*içerikler*@
+                  @if(Model.Products.Count>0)//ürün varsa gel foreachı çalıştır
+                  {
+                        @foreach (var item in Model.Products)//her ürüne göre oluşacak
+                        {
+                            <tr>
+                            <td>@item.ProductId</td>
+                            <td>@item.Name</td>
+                            <td><img src="~/img/@item.ImageUrl" width="80"></td>
+                            <td>@item.Author</td>
+                            <td>@item.Pages</td>
+                            <td>@item.Description</td>
+                            <td>
+                                @if(item.IsHome) @*ürün anasayfa onaylıysa bu iconu kullan*@
+                                {
+                                  <i class="fas fa-check-circle"></i>
+                                }
+                                else
+                                {
+                                  <i class="fas fa-times-circle"></i>
+                                }
+                            </td>
+                            <td>
+                                @if(item.IsApproved) @*ürün anasayfa onaylıysa bu iconu kullan*@
+                                {
+                                  <i class="fas fa-check-circle"></i>
+                                }
+                                else
+                                {
+                                  <i class="fas fa-times-circle"></i>
+                                }
+                            </td>
+                            <td>
+                                <a href="/admin/products/@item.ProductId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                               
+                               <form action="/admin/DeleteFromCategory" method="post" style="display: inline;">
+                                  <input type="hidden" name="ProductId" value="@item.ProductId">
+                                  <input type="hidden" name="CategoryId" value="@Model.CategoryId">
+                                  <button type="submit" class="btn btn-danger btn-sm mr-2">Delete</button>
+                               </form>
+                            </td>
+                        </tr>
+                      }
+                  }
+                  else @*eğer yoksa*@
+                  {
+                      <div class="alert alert-warning" role="alert">
+                        <h3>Ürün Yok</h3>
+                      </div>
+
+                  }
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+  </div>

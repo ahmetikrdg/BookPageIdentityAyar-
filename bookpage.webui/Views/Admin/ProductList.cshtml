@@ -1,0 +1,76 @@
+@model ProductListViewModel
+
+<div class="row">
+    <div class="col-md-12">
+       <h1>Admin Products</h1>
+       <hr>
+       <a href="/admin/products/create" class="btn btn-primary btn-sm">Add Product</a>
+          <table class="table table-bordered">
+              <thead>@*başlıklar*@
+                  <tr>
+                      <td>Id</td>
+                      <td>Name</td>
+                      <td>Image</td>
+                      <td>Author</td>
+                      <td>Pages</td>
+                      <td>Description</td>
+                      <td>AnaSayfa</td>
+                      <td>Onaylı</td>
+                      <td>Erişim</td>
+                  </tr>
+              </thead>
+              <tbody>@*içerikler*@
+                  @if(Model.Products.Count>0)//ürün varsa gel foreachı çalıştır
+                  {
+                        @foreach (var item in Model.Products)//her ürüne göre oluşacak
+                        {
+                            <tr>
+                            <td>@item.ProductId</td>
+                            <td>@item.Name</td>
+                            <td><img src="~/img/@item.ImageUrl" width="80"></td>
+                            <td>@item.Author</td>
+                            <td>@item.Pages</td>
+                            <td>@item.Description</td>
+                            <td>
+                                @if(item.IsHome) @*ürün anasayfa onaylıysa bu iconu kullan*@
+                                {
+                                  <i class="fas fa-check-circle"></i>
+                                }
+                                else
+                                {
+                                  <i class="fas fa-times-circle"></i>
+                                }
+                            </td>
+                            <td>
+                                @if(item.IsApproved) @*ürün anasayfa onaylıysa bu iconu kullan*@
+                                {
+                                  <i class="fas fa-check-circle"></i>
+                                }
+                                else
+                                {
+                                  <i class="fas fa-times-circle"></i>
+                                }
+                            </td>
+                            <td>
+                                <a href="/admin/products/@item.ProductId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                               
+                               <form action="/admin/ProductDelete" method="post" style="display: inline;">
+                                  <input type="hidden" name="ProductId" value="@item.ProductId">
+                                  <button type="submit" class="btn btn-danger btn-sm mr-2">Delete</button>
+                               </form>
+                            </td>
+                        </tr>
+                      }
+                  }
+                  else @*eğer yoksa*@
+                  {
+                      <div class="alert alert-warning" role="alert">
+                        <h3>Ürün Yok</h3>
+                      </div>
+
+                  }
+              </tbody>
+          </table>
+
+    </div>
+</div>

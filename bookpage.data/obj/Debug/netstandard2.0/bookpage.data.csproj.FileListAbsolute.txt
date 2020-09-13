@@ -1,0 +1,48 @@
+D:\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.deps.json
+D:\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.dll
+D:\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.pdb
+D:\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.dll
+D:\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.pdb
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csprojAssemblyReference.cache
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfoInputs.cache
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfo.cs
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CoreCompileInputs.cache
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CopyComplete
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.dll
+D:\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.deps.json
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.dll
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.pdb
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csprojAssemblyReference.cache
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfoInputs.cache
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfo.cs
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CopyComplete
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\Yeni klasör\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.deps.json
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.dll
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.pdb
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csprojAssemblyReference.cache
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfoInputs.cache
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfo.cs
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CopyComplete
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\bookpage-AdminSayfalari-master\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.deps.json
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.data.pdb
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.dll
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\bin\Debug\netstandard2.0\bookpage.entity.pdb
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csprojAssemblyReference.cache
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfoInputs.cache
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.AssemblyInfo.cs
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.csproj.CopyComplete
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.dll
+C:\Users\Ahmet\Desktop\bookpageg\bookpage.data\obj\Debug\netstandard2.0\bookpage.data.pdb
